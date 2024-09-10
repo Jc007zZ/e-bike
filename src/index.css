@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  h1 {
+    @apply text-5xl;
+    @apply text-white;
+    @apply font-extrabold;
+  }
+  p{
+    @apply text-white;
+    @apply text-2xl;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  font-family: "Exo 2", sans-serif;
+}
+
+
+.bgHome {
+  background-image: url(https://www.brekr.com/en/wp-content/uploads/sites/3/2023/11/B7000-1.jpg);
+  background-size:cover;
+  
+  background-position: left;
+}
+
+.navItems{
+  background: linear-gradient(90deg, green 50%, black 50%);
+  background-size: 200% 100%; 
+  background-position: 100% 0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.7s ease; 
+}
+
+.navItems:hover {
+  background-position: 0% 100%; 
+}
+
+.sellerBorder {
+  position: relative;
+  color: rgba(0, 0, 0, 0.78); 
+}
+
+.sellerBorder::after{
+  content: '';
+  position: absolute;
+  top: -50%; 
+  left: 50%;
+  transform: translate(-50%);
+  width: 10%; 
+  height: 8px; 
+  background-color: rgba(0, 0, 0, 0.78); 
+ 
+}
+
+.sellerImg{
+  flex-grow: 1;
+  flex-basis: 450px;
+}
+
+.sellerDesc{
+  flex-grow: 1;
+  flex-basis: 200px;
+}
